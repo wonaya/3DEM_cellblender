@@ -10,3 +10,10 @@ This file contains wrapper scripts with parameters that is implemented from the 
 
 `cellblender.json`
 Include details of application parameters, input, parameters and output. 
+
+# App deployment
+
+Setup Tapis environment to 3DEM tenant first and have permission set up to deploy apps to 3DEM execution system.
+```tapis apps create -F cellblender.json ```
+
+
