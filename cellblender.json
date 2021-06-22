@@ -1,0 +1,61 @@
+{
+	"id": "cellblender",
+	"name": "cellblender",
+	"icon": null,
+	"parallelism": "PARALLEL",
+	"defaultProcessorsPerNode": 20,
+	"defaultMemoryPerNode": 1,
+	"defaultNodeCount": 1,
+	"defaultMaxRunTime": "08:00:00",
+	"defaultQueue": "normal",
+	"version": "2.79",
+	"isPublic": false,
+	"helpURI": "https://github.com/mcellteam/cellblender",
+	"label": "cellblender",
+	"shortDescription": "Addon for Blender (2.7x) to create computational cell biology models",
+	"longDescription": "Define molecules and reactions, create geometric objects, define named surface regions on the objects, assign properties to those regions, run an MCell simulation based off of the CellBlender project, create plots of said simulation, visualize an animation of the molecule trajectories, and render the results",
+	"tags": [
+		"DCV",
+		"desktop",
+		"cellblender",
+		"interactive",
+		"resolution imaging",
+		"appCategory:Visualization"
+	],
+	"ontology": [],
+	"executionType": "HPC",
+	"executionSystem": "3dem.community.exec.stampede2",
+	"deploymentPath": "applications/3dem/cellblender-2.79",
+	"deploymentSystem": "cloud.corral.work.wonaya",
+	"templatePath": "wrapper.sh",
+	"testPath": "test.sh",
+	"checkpointable": false,
+	"available": true,
+	"inputs": [{
+			"id": "workingDirectory",
+			"value": {
+                                "default": "",
+                                "visible": true,
+				"required": true,
+				"order": 0
+			},
+			"details": {
+				"label": "Working Directory",
+				"description": "The directory containing files that you want to work on. If your files are in My Data, it is recommended to leave this blank. If your files are large and in My Projects, it is recommended to first move them to My Data. This directory and its files will be copied to where your app session runs. You can drag the link for the directory from the Data Browser on the left, or click the 'Select Input' button and then select the directory.",
+				"argument": null,
+				"showArgument": false,
+				"repeatArgument": false
+			},
+			"semantics": {
+				"ontology": [
+					"xsd:string"
+				],
+				"fileTypes": [
+					"raw-0"
+				]
+			}
+		}
+	],
+	"parameters": [],
+	"outputs": []
+}
