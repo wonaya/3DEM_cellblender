@@ -56,6 +56,78 @@
 			}
 		}
 	],
-	"parameters": [],
-	"outputs": []
+	"parameters": [
+        {
+            "id": "desktop_resolution",
+            "value": {
+                "visible": true,
+                "required": true,
+                "type": "enumeration",
+                "order": 0,
+                "enquote": false,
+                "default": "1280x800",
+                "enum_values": [
+                    {
+                        "800x600": "800x600"
+                    },
+                    {
+                        "1280x800": "1280x800"
+                    },
+                    {
+                        "1920x1080": "1920x1080"
+                    },
+                    {
+                        "1920x1200": "1920x1200"
+                    },
+                    {
+                        "1600x1200": "1600x1200"
+                    },
+                    {
+                        "2560x1600": "2560x1600"
+                    }
+                ]
+            },
+            "details": {
+                "label": "Desktop Resolution",
+                "description": "Set the desktop screen size for your visualization session (only used if VNC interactive session is created).",
+                "argument": null,
+                "showArgument": false,
+                "repeatArgument": false
+            },
+            "semantics": {
+                "minCardinality": 1,
+                "maxCardinality": 1,
+                "ontology": [
+                    "xs:enumeration",
+                    "xs:string"
+                ]
+            }
+        },
+        {
+            "id": "_webhook_base_url",
+            "semantics": {
+                "minCardinality": 1,
+                "ontology": [
+                    "xs:string"
+                ],
+                "maxCardinality": 1
+            },
+            "value": {
+                "required": true,
+                "enquote": false,
+                "visible": true,
+                "validator": null,
+                "type": "string",
+                "order": 1
+            },
+            "details": {
+                "argument": null,
+                "repeatArgument": false,
+                "description": null,
+                "showArgument": false,
+                "label": "Base portal webhook url."
+            }
+        }
+    ],
+    "outputs": []
 }

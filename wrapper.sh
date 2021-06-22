@@ -168,15 +168,22 @@ fi
 
 # run an xterm and launch paraview for the user; execution will hold here
 
-module load TACC intel/17 swr
+WORKDIR=${workdir}
+
+module load TACC
+ml python3 swr
 
 echo "TACC: launching cellblender"
 export DISPLAY
-swr -t 16 /work2/projects/NeuroNex/3DEM/bin/Blender/Blender-2.79-CellBlender/blender
+#python3 alignem_swift.py
 
 #xterm -r -ls -geometry 80x24+10+10 -title '*** Exit this window to kill your interactive session ***' -e 'swr -t 8 paraview'
 
-#xterm -r -ls -geometry 80x24+10+10 -title '*** Exit this window to kill your interactive session ***' -e '3dmod' 
+xterm -r -ls -geometry 80x24+10+10 -title '*** Exit this window to kill your interactive session ***' -e 'swr -t 16 /work2/projects/NeuroNex/3DEM/bin/Blender/Blender-2.79-CellBlender/blender'
+ 
+
+#xterm -r -ls -geometry 80x24+10+10 -title '*** Exit this window to kill your interactive session ***' 
+
 #xterm -r -ls -geometry 80x24+10+10 -title '*** Exit this window to kill your interactive session ***' 
 
 
