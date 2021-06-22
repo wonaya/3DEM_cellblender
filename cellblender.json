@@ -24,7 +24,7 @@
 	],
 	"ontology": [],
 	"executionType": "HPC",
-	"executionSystem": "3dem.community.exec.stampede2",
+	"executionSystem": "wonaya.NeuroNex-3DEM.exec.stampede2.HPC",
 	"deploymentPath": "applications/3dem/cellblender-2.79",
 	"deploymentSystem": "cloud.corral.work.wonaya",
 	"templatePath": "wrapper.sh",
@@ -36,7 +36,7 @@
 			"value": {
                                 "default": "",
                                 "visible": true,
-				"required": true,
+				"required": false,
 				"order": 0
 			},
 			"details": {
