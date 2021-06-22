@@ -13,7 +13,7 @@ Include details of application parameters, input, parameters and output.
 
 # App deployment
 
-Setup Tapis environment to 3DEM tenant first and have permission set up to deploy apps to 3DEM execution system.
+Setup Tapis environment to 3DEM tenant first and have permission set up to deploy apps to 3DEM execution system. </br>
 ```tapis apps create -F cellblender.json ```
 
 
